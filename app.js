@@ -274,7 +274,8 @@ old or older.
 - Store the result (true or false) in the variable 'isAdultPresent'. 
 */
 
-let isAdultPresent = null;
+const currentYear = new Date().getFullYear();
+let isAdultPresent = devs.some(dev => currentYear - dev.year >= 18);
 
 // Complete the exercise in the space below:
 
@@ -296,7 +297,7 @@ Use Array.prototype.every() to determine if every person in the devs array is
 - Store the result (true or false) in the variable 'isEveryone19OrOlder'.
 */
 // set the current year 
-const currentYear = new Date().getFullYear();
+// const currentYear = new Date().getFullYear();
 
 let isEveryone19OrOlder = devs.every(dev => currentYear - dev.year >= 19);
 
